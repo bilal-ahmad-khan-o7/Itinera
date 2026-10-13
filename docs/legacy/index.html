@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Search</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f9f9f9; }
+    input, button { padding: 10px; margin: 5px 5px 5px 0; }
+    .hotel-card {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      max-width: 350px;
+    }
+    .hotel-card img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Hotels by City</h1>
+  <input type="text" id="cityInput" placeholder="Enter city name" />
+  <button onclick="searchHotels(true)">Search</button>
+  <button onclick="searchHotels(false)">Next 100 Hotels</button>
+  <button onclick="exportToExcel()">Export to Excel</button>
+
+  <div id="results"></div>
+
+  <!-- SheetJS for Excel export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <!-- Your app logic -->
+  <script src="script.js"></script>
+</body>
+</html>
